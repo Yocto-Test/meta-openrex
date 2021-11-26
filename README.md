@@ -27,16 +27,16 @@ In case you would like to know more about YOCTO & How To Use It, for example how
 Copy and paste this into your Linux host machine 
  
     cat > .repo/local_manifests/imx6openrex.xml << EOF
-    <?xml version="1.0" encoding="UTF-8"?>
-    <manifest>
-     
-      <remote fetch="git://github.com/FEDEVEL" name="fedevel"/>
-     
-      <project remote="fedevel" revision="jethro" name="meta-openrex" path="sources/meta-openrex">
-        <copyfile src="openrex-setup.sh" dest="openrex-setup.sh"/>
-      </project>
-    </manifest>
-    EOF
+     <?xml version="1.0" encoding="UTF-8"?>
+     <manifest>
+ 
+       <remote fetch="https://github.com/Yocto-Test" name="Yocto-Test"/>
+ 
+     <project remote="Yocto-Test" revision="jethro" name="meta-openrex" path="sources/meta-openrex">
+    <copyfile src="openrex-setup.sh" dest="openrex-setup.sh"/>
+  </project>
+</manifest>
+EOF
  
 ### 4) Sync repositories
     repo sync
